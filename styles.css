@@ -180,7 +180,27 @@ button {
   position: fixed;
   top: 0;
 }
-
+.nav{
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+.button{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  width: 100px;
+  height: 40px;
+  color: white;
+  background-color: #171717;
+  border-radius: 10px;
+  border: 2px solid #9dffad;
+  cursor: pointer;
+}
 @media only screen and (max-width: 700px) {
   .box-container {
     padding: 0 20px;
