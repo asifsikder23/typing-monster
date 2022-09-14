@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
+</head>
+<body class="bg-dark">
+    <h1 class="text-bg-success text-center p-4">
+        Blogs On JavaScript
+    </h1>
+    <section class="m-1 m-md-4">
+        <div class="shadow-lg p-0 pt-3 pb-3 p-md-5">
+            <div>
+                <h1 class="text-center mb-3 mb-md-5 text-white text-bg-success p-2">
+                    Difference Between Local Storage and Session Storage
+                </h1>
+            </div>
+            <div class="row d-block d-md-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid" src="images/1_gouqaxjM2U_oxWaQirXiiA.png" alt="">
+                    <p class="text-white bg-success rounded p-4 mt-4"><span class="fs-3">"</span> LocalStorage and sessionStorage are almost identical and have the same API. The difference is that with sessionStorage,the data is persisted only until the window or tab is closed. With localStorage, the data is persisted until the user manually clears the browser cache or until your web app clears the data. <span class="fs-3">"</span></p>
+                </div>
+                <div class=" col-12 col-md-6 d-block d-md-flex justify-content-center row container-fluid mx-auto">
+                    <div class="col-12 col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item bg-success text-white text-center fs-3">Local Storage</li>
+                            <li class="list-group-item">The storage capacity of local storage is 5MB/10MB</li>
+                            <li class="list-group-item">As it is not session-based, it must be deleted via javascript or manually. <br> <br> <br></li>
+                            <li class="list-group-item">The client  can only read local storage.</li>
+                            <li class="list-group-item">There is no transfer of data to the server.</li>
+                            <li class="list-group-item">There are fewer old browsers that support it.</li>
+                          </ul>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <ul class="list-group">
+                            <li class="list-group-item bg-success text-white text-center fs-3">Session Storage</li>
+                            <li class="list-group-item">The storage capacity of session storage is 5MB.</li>
+                            <li class="list-group-item">It’s session-based and works per window or tab. This means that data is stored only for the duration of a session, i.e., until the browser (or tab) is closed.</li>
+                            <li class="list-group-item">The client can only read local storage.</li>
+                            <li class="list-group-item">There is no transfer of data to the server.</li>
+                            <li class="list-group-item">There are fewer old browsers that support it.</li>
+                          </ul>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </section>
+
+    <section class="m-1 m-md-4">
+        <div class="shadow-lg p-0 pt-3 pb-3 p-md-5">
+            <h1 class="text-center mb-3 mb-md-5 text-white text-bg-success p-2">
+                Difference Between Global Scope and Block Scope
+            </h1>
+            <div class="row d-block d-md-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-6">
+                    <p class="text-white">
+                        The variables defined outside of any function or curly brackets are known as global variables and have global scope. Global scope means that the variables can be accessed from any part of that program, any function or conditional state can access that variable.
+                        <br> <br>
+                        Block scope is also a sub-type of local scope. The block scope can be defined as the scope of the variables inside the curly brackets {}. Now, these curly brackets can be of loops, or conditional statements, or something else. You are only allowed to refer to these variables from within the curly brackets {}.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid" src="images/Scope-in-JS-Facebook.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="m-1 m-md-4">
+        <div class="shadow-lg p-0 pt-3 pb-3 p-md-5">
+            <h1 class="text-center mb-3 mb-md-5 text-white text-bg-success p-2">
+                Mechanism of Event-Loop in JavaScript
+            </h1>
+            <div class="row d-block d-md-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid" src="images/Screenshot 2022-09-15 031604.jpg" alt="">
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="text-white">
+                        An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty. The event loop is the secret by which JavaScript gives us an illusion of being multithreaded even though it is single-threaded.Event loop manage synchronous and asynchronous in JS.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="m-1 m-md-4">
+        <div class="shadow-lg p-0 pt-3 pb-3 p-md-5">
+            <h1 class="text-center mb-3 mb-md-5 text-white text-bg-success p-2">
+                How many ways there to get UNDEFINED?
+            </h1>
+            <div class="row d-block d-md-flex justify-content-center align-items-center">
+                <div class="col-12 col-md-6">
+                    <p class="text-white">
+                        The undefined is a primitive type in JavaScript.So the undefined is a type and the undefined type has exactly one value that is undefined.
+                        <br> <br>
+                        The ways of getting UNDEFINED are: <br>
+                        1. When you declare a variable and don't initialize it to a value, the variable will have a value of undefined. <br>
+                        2. If you access a non-existing property of an object, you'll get undefined. <br>
+                        3. When you call a function with a number of parameters, you often pass the same number of arguments.Otherwise you will get undefined. <br>
+                        4. A function without a return statement or with a return statement but without an expression returns undefined. <br>
+                        5. When you access an array element that is out-of-bounds, you'll get the undefined.
+                    </p>
+                </div>
+                <div class="col-12 col-md-6">
+                    <img class="img-fluid" src="images/Screenshot 2022-09-15 032243.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js
+    "></script>
+</body>
+</html>
