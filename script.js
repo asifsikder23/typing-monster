@@ -62,6 +62,7 @@ const validate = (key) => {
   return false;
 };
 
+
 // FINISHED TYPING
 const gameOver = () => {
   document.removeEventListener("keydown", typeController);
@@ -69,6 +70,17 @@ const gameOver = () => {
   // so total time taken is current time - start time
   const finishTime = new Date().getTime();
   const timeTaken = (finishTime - startTime) / 1000;
+
+    // typing speed
+  let words = questionText.length;
+  let characterPerSecond = 0;
+    if (errorCount >= 1) {
+    words = questionText.length + errorCount;
+    characterPerSecond = Math.round(words / timeTaken);
+    }
+    else {
+    characterPerSecond = Math.round((questionText.length) / timeTaken);
+  }
 
   // show result modal
   resultModal.innerHTML = "";
@@ -83,10 +95,11 @@ const gameOver = () => {
     <h1>Finished!</h1>
     <p>You took: <span class="bold">${parseInt(timeTaken)}</span> seconds</p>
     <p>You made <span class="bold red">${errorCount}</span> mistakes</p>
+    <p>Typing speed is: <span class="bold green">${characterPerSecond}</span> character per second.</p>
     <button onclick="closeModal()">Close</button>
   `;
 
-  addHistory(questionText, timeTaken, errorCount);
+  addHistory(questionText, timeTaken, errorCount, characterPerSecond);
 
   // restart everything
   startTime = null;
